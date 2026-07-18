@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+  {"type":"Feature","properties":{"name":"長江","source":"Natural Earth 公開領域水文資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[91,33],[97,31],[103,29],[108,30],[113,30.5],[121.5,31.4]]}},
+  {"type":"Feature","properties":{"name":"湄公河","source":"Natural Earth 公開領域水文資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[94,33],[99,24],[101,20],[103,17],[105,12],[106,10]]}},
+  {"type":"Feature","properties":{"name":"恆河","source":"Natural Earth 公開領域水文資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[79,30],[82,26],[87,25],[90,24],[90.5,22]]}}
+]}

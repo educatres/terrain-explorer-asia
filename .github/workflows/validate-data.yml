@@ -1,0 +1,16 @@
+name: Validate project data
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON files
+        run: |
+          python -m json.tool data/places.json > /dev/null
+          python -m json.tool data/quizzes.json > /dev/null
+          python -m json.tool geojson/mountains.geojson > /dev/null
+          python -m json.tool geojson/rivers.geojson > /dev/null
+          python -m json.tool geojson/lakes.geojson > /dev/null

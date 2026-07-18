@@ -1,0 +1,5 @@
+{"type":"FeatureCollection","features":[
+  {"type":"Feature","properties":{"name":"喜馬拉雅山脈","source":"Natural Earth／公開地理資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[72.5,35.5],[77,33],[81,30],[86,28],[91,28],[96,29]]}},
+  {"type":"Feature","properties":{"name":"烏拉山脈","source":"Natural Earth／公開地理資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[58,50],[58.5,55],[59,60],[60,65],[66,68]]}},
+  {"type":"Feature","properties":{"name":"天山山脈","source":"Natural Earth／公開地理資料參考後之教學概略化"},"geometry":{"type":"LineString","coordinates":[[68,42],[74,42.5],[80,42],[86,43],[92,43]]}}
+]}

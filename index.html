@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="探索亞洲地形、國家公園與代表性特有動植物的互動式地理教材。" />
+  <title>地形探險隊－亞洲</title>
+  <link rel="preconnect" href="https://server.arcgisonline.com" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/style.css?v=20260718-8" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Terrain Explorer of Asia</p>
+      <h1>地形探險隊－亞洲</h1>
+    </div>
+    <div class="header-actions">
+      <button id="tourBtn" class="btn">開始導覽</button>
+      <button id="quizBtn" class="btn btn-primary">隨機挑戰</button>
+      <a class="btn" href="docs/specification.md" target="_blank" rel="noopener">規格書</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="教材控制區">
+      <section>
+        <h2>探索主題</h2>
+        <p class="hint">探索東亞、東南亞、南亞、中亞、西亞與北亞的地形、國家公園及代表性物種。</p>
+        <div id="categoryFilters" class="filter-grid"></div>
+      </section>
+
+      <section>
+        <label for="searchInput"><strong>搜尋景點</strong></label>
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="地形、物種或學名" />
+          <button id="searchBtn" class="icon-btn" aria-label="搜尋">⌕</button>
+        </div>
+        <div id="searchResults" class="search-results" aria-live="polite"></div>
+      </section>
+
+      <section>
+        <h2>探索清單</h2>
+        <div id="placeList" class="place-list" aria-label="可選取的地形與物種清單"></div>
+      </section>
+
+      <section class="lesson-box">
+        <h2>觀察任務</h2>
+        <p id="missionText">比較喜馬拉雅山脈與烏拉山脈，觀察它們在亞洲的位置與形成方式。</p>
+        <button id="nextMissionBtn" class="text-btn">換一題 →</button>
+      </section>
+
+      <section>
+        <h2>圖例</h2>
+        <div id="legend" class="legend"></div>
+      </section>
+    </aside>
+
+    <section class="map-panel">
+      <div id="map" role="application" aria-label="亞洲衛星地形、代表物種與教材標註地圖"></div>
+      <div class="map-note">衛星底圖不顯示道路或國界；地形、動植物圖標與文字為教材標註。</div>
+    </section>
+
+    <aside id="infoPanel" class="info-panel" aria-live="polite">
+      <div class="empty-state">
+        <div class="empty-icon">🧭</div>
+        <h2>選擇地形或物種</h2>
+        <p>點選地圖圖標或左側清單，查看實景照片、地理成因、生態特徵與資料來源。</p>
+      </div>
+    </aside>
+  </main>
+
+  <dialog id="quizDialog">
+    <form method="dialog" class="quiz-card">
+      <button class="dialog-close" value="cancel" aria-label="關閉">×</button>
+      <p class="eyebrow">地圖挑戰</p>
+      <h2 id="quizQuestion"></h2>
+      <div id="quizOptions" class="quiz-options"></div>
+      <p id="quizFeedback" class="quiz-feedback"></p>
+      <button id="nextQuizBtn" type="button" class="btn btn-primary">下一題</button>
+    </form>
+  </dialog>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/app.js?v=20260718-8" type="module"></script>
+</body>
+</html>
